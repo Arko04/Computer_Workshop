@@ -3,7 +3,7 @@
 
 .data
 num1:   .word 5        @ First number stored in RAM
-num2:   .word 7        @ Second number stored in RAM
+num2:   .word 3        @ Second number stored in RAM
 
 main:
     ldr r1, =num1      @ Load the address of the first number into r1

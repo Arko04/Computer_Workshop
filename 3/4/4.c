@@ -25,7 +25,13 @@ int pop()
 }
 int top()
 {
-    return head->val;
+    if(head->next == NULL)
+    {
+        printf("stack is empty\n");
+        return 0;
+    }
+    printf("The top value is: %d\n",head->next->val);
+    return 1;
 }
 int push(int val)
 {
@@ -38,6 +44,11 @@ int push(int val)
 }
 int display()
 { 
+    if(head->next == NULL)
+    {
+        printf("stack is empty\n");
+        return 0;
+    }
     for(Node* cur = head->next; cur != NULL; cur = cur->next)
     {
         printf("%d ", cur->val);
@@ -61,5 +72,8 @@ int main(void)
     display();
     pop();
     display();
+    pop();
+    display();
+    pop();
     return 0;
 }
